@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  portainer:
+    environment:
+      - PUID=${UID}
+      - PGID=${GID}
+      - VIRTUAL_PORT=9000 #<-- use 9000 here for behind proxy running
+      - VIRTUAL_HOST=portainer.example.com
+    networks:
+      - default
+      - nginx-proxy
+
+networks:
+  default:
+  nginx-proxy:
+    external:
+      name: nginx-proxy

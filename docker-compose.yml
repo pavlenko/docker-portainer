@@ -7,9 +7,12 @@ services:
       - PUID=${UID}
       - PGID=${GID}
     privileged: true
-    ports:
-      - "${PORTAINER_PORT:-9443}:9443"
     volumes:
       - './data:/data'
       - '/var/run/docker.sock:/var/run/docker.sock'
     restart: always
+    networks:
+      - default
+
+networks:
+  default:

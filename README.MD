@@ -3,10 +3,15 @@
 ### Setup:
 
 - copy `.env.example` to `.env` and change variables if needed
-- run `docker-compose build`
-- run `docker-compose up -d`
-- open in browser `https://localhost:9443`
-- setup admin password and then you can use it
+- copy `docker-compose.<env>.yml` to `docker-compose.override.yml` and change variables if needed
+- run `make up`
+
+Then you can opn it in browser by url:
+
+- For `local` - `https://localhost:9443`
+- For `proxy` - `https://portainer.example.com` (as in PORTAINER_HOST env var)
+
+After all: setup admin password and then you can use it
 
 ### Backup
 
