@@ -7,3 +7,8 @@
 - run `docker-compose up -d`
 - open in browser `https://localhost:9443`
 - setup admin password and then you can use it
+
+### Backup
+
+**WARN:** Before make backup of this project you may need to change owner of `data`
+directory to yourself via `sudo chown -R 1000:1000 data`
